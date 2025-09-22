@@ -1,0 +1,5 @@
+{
+  "blank": { "radius_mm": 120.0, "thickness_mm": 1.20, "plies": 8, "fiber_angle_deg": 0 },
+  "tool":  { "dome_radius_mm": 60.0, "final_gap_mm": 3.1 },
+  "mesh_hint": { "elem_size_mm": 4.0, "type": "shell (quad), 5–7 through-thickness IP" }
+}

@@ -1,0 +1,11 @@
+{
+  "temperature_C": 230,
+  "punch_motion": {
+    "fast_mm_per_s": 100.0,
+    "slow_mm_per_s": 20.0,
+    "switch_at_mm": 50.0,
+    "total_stroke_mm": 110.0
+  },
+  "friction": { "mu": 0.15, "note": "may vary with T and slip rate" },
+  "notes": "Gap kept above laminate thickness to observe out-of-plane response"
+}
