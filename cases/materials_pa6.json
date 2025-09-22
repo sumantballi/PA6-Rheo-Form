@@ -1,0 +1,42 @@
+{
+  "shear": {
+    "eta_inf": 0.0,
+    "lambda": 0.08,
+    "a": 2.0,
+    "n": 0.65,
+    "eta0_ref": 2500.0,
+    "Q": 45000.0,
+    "T_ref": 503.15
+  },
+  "bending": {
+    "Kb0": 8e-3,
+    "m": 0.6,
+    "Qb": 25000.0,
+    "T_ref": 503.15
+  },
+  "clt": {
+    "D_room": 10
+  },
+  "constants": {
+    "R": 8.314
+  },
+  "geometry": {
+    "forming_dome": {
+      "final_tool_gap_mm": 3.1,
+      "initial_spacing_mm": 110,
+      "stroke_fast_mm_per_s": 100,
+      "stroke_slow_mm_per_s": 20
+    },
+    "torsion_bar": {
+      "w_mm": 10,
+      "h_mm": 10,
+      "L_total_mm": 60,
+      "L_gauge_mm": 48,
+      "warpage_gap_ball_mm": 1
+    },
+    "rheo_bending_strip": {
+      "assumed_width_mm": 10,
+      "assumed_ply_thickness_mm": 0.15
+    }
+  }
+}
