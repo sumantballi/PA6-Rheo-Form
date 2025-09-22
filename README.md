@@ -18,3 +18,21 @@ Outputs: viscosity isotherms (η–γ̇), bending isotherms (M–κ̇), Fast vs 
 ## Scope
 Constitutive modelling + figures + a solver-ready hook.  
 No full contact forming simulation.
+
+## 🔍 Results (quick look)
+<p align="center">
+  <img src="figs/eta_isotherm_503K.png" alt="Viscosity η–γ̇ @230°C" width="45%">
+  <img src="figs/bending_isotherm_503K_Nmm.png" alt="Bending M–κ̇ @230°C" width="45%">
+</p>
+<p align="center">
+  <img src="figs/M_kappa_Fast_260degC_Nmm.png" alt="M–κ Fast @260°C" width="45%">
+  <img src="figs/M_kappa_Slow_260degC_Nmm.png" alt="M–κ Slow @260°C" width="45%">
+</p>
+
+**CLT vs molten (summary):** see `figs/CLT_vs_molten_ratio.txt`.
+
+
+## 🎯 Relevance to PhD topic
+- **Constitutive**: temperature- & rate-dependent shear (Carreau–Yasuda + Arrhenius) and **rheo-bending** \(M=K_b(T)\,\dot\kappa^m\).
+- **Findings**: molten bending stiffness at forming conditions is ≈ **10²–10³×** lower than room-T CLT → explains wrinkle suppression with CLT inputs.
+- **Implementation**: `form_cases/dome/material_hook.py` mirrors a UMAT/VUMAT/material-plugin call (same law → solver).
