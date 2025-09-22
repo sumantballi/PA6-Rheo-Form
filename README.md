@@ -20,13 +20,15 @@ Constitutive modelling + figures + a solver-ready hook.
 No full contact forming simulation.
 
 ## 🔍 Results (quick look)
+
+**CLT vs molten:** [`figs/CLT_vs_molten_ratio.txt`](figs/CLT_vs_molten_ratio.txt)
+
 <p align="center">
-  <img src="figs/eta_isotherm_503K.png" alt="Viscosity η–γ̇ @230°C" width="45%">
-  <img src="figs/bending_isotherm_503K_Nmm.png" alt="Bending M–κ̇ @230°C" width="45%">
+  <img src="figs/eta_overlay_200_230_260C.png" alt="η–γ̇ overlay (200/230/260 °C)" width="45%">
+  <img src="figs/bending_overlay_200_230_260C_Nmm.png" alt="M–κ̇ overlay (200/230/260 °C)" width="45%">
 </p>
 <p align="center">
-  <img src="figs/M_kappa_Fast_260degC_Nmm.png" alt="M–κ Fast @260°C" width="45%">
-  <img src="figs/M_kappa_Slow_260degC_Nmm.png" alt="M–κ Slow @260°C" width="45%">
+  <img src="figs/M_kappa_Fast_vs_Slow_260C_Nmm.png" alt="M–κ Fast vs Slow (260 °C)" width="45%">
 </p>
 
 **CLT vs molten (summary):** see `figs/CLT_vs_molten_ratio.txt`.
