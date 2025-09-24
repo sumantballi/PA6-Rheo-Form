@@ -1,9 +1,11 @@
 (https://img.shields.io/github/v/release/Sumantballi/PA6-Rheo-Form?sort=semver)](https://github.com/Sumantballi/PA6-Rheo-Form/releases)
+
 This mini-project was inspired by Dennis Brands’ PhD on Forming simulations for unidirectional thermoplastic composites: Improving in-plane shear characterization and modeling; it’s a minimal, practice-oriented replication of key ideas.  
 > Thesis: [Forming simulations for unidirectional thermoplastic composites](https://research.utwente.nl/en/publications/forming-simulations-for-unidirectional-thermoplastic-composites-i-2).
 
-Small project showing temperature- & rate-dependent **shear** (Carreau–Yasuda + Arrhenius) and **rheo-bending** (power-law + Arrhenius) for molten PA6.  
+Showing temperature- & rate-dependent **shear** (Carreau–Yasuda + Arrhenius) and **rheo-bending** (power-law + Arrhenius) for molten PA6.  
 Outputs: viscosity isotherms (η–γ̇), bending isotherms (M–κ̇), Fast vs Slow M–κ, and a solver-style **material hook**.
+No new rheological tests were conducted. Only the constitutive models and plotting workflow are illustrated by the curves used here, which are synthetic/representative and parameterized to fall within published PA6 melt ranges.
 
 ## What to look for
 - η–γ̇: shear-thinning; 260 °C curve below 230 °C below 200 °C.  
@@ -40,21 +42,22 @@ No full contact forming simulation.
 ## Key Methods & Equations
 
 **Shear (Carreau–Yasuda, with anchored Arrhenius):**  
-\[
-\eta(\dot\gamma,T)=\eta_\infty + \big(\eta_0(T)-\eta_\infty\big)\,\Big[1+(\lambda\,\dot\gamma)^a\Big]^{\frac{n-1}{a}},\quad
-\eta_0(T)=\eta_{0,\mathrm{ref}}\exp\!\Big(\frac{Q}{R}\big(\tfrac{1}{T}-\tfrac{1}{T_\mathrm{ref}}\big)\Big)
-\]
+$$\[\eta(\dot\gamma,T)=\eta_\infty + \big(\eta_0(T)-\eta_\infty\big)\,\Big[1+(\lambda\,\dot\gamma)^a\Big]^{\frac{n-1}{a}},\quad$$
+$$\eta_0(T)=\eta_{0,\mathrm{ref}}\exp\!\Big(\frac{Q}{R}\big(\tfrac{1}{T}-\tfrac{1}{T_\mathrm{ref}}\big)\Big)\]$$
 
 **Rheo-bending (viscous, rate- and temperature-dependent):**  
-\[
-M = K_b(T)\,\dot\kappa^{\,m},\qquad
-K_b(T)=K_{b0}\exp\!\Big(\frac{Q_b}{R}\big(\tfrac{1}{T}-\tfrac{1}{T_\mathrm{ref}}\big)\Big),\qquad
-D_\text{eq}=\frac{M}{\dot\kappa}
-\]
+$$\[M = K_b(T)\,\dot\kappa^{\,m},\qquad$$
+$$K_b(T)=K_{b0}\exp\!\Big(\frac{Q_b}{R}\big(\tfrac{1}{T}-\tfrac{1}{T_\mathrm{ref}}\big)\Big),\qquad$$
+$$D_\text{eq}=\frac{M}{\dot\kappa}\]$$
 
-**CLT vs molten contrast (wrinkling relevance):** compare room-T \(D_\text{room}\) to \(D_\text{eq}(T,\dot\kappa)\) at forming conditions.
+**CLT vs molten contrast (wrinkling relevance):** compare room-T $$\(D_\text{room}\)$$ to $$\(D_\text{eq}(T,\dot\kappa)\)$$ at forming conditions.
 
 
-
+ Future-Scope
+- **Experimental validation:** Refit shear (Carreau–Yasuda) and rheo-bending parameters; substitute measured PA6 (or UD PA6/CF) data for synthetic curves.
+- **Anisotropy (IFRF-lite):** Make bending orthotropic $$(K_b^L vs. K_b^T)$$ and extend shear to fiber-aligned viscosities $$(η_L, η_T)$$.
+- **Forming integration:** Apply `form_cases/dome/material_hook.py` to a FE solver (UMAT/VUMAT/plugin) and evaluate it against a benchmark for dome-forming.
+- **Thermo-rheology:** Reassess Arrhenius/WLF validity over a broader window; couple temperature fields (T(x,t)) and contact/heat transfer.
+ 
 
 
