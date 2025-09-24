@@ -53,7 +53,7 @@ $$D_\text{eq}=\frac{M}{\dot\kappa}\]$$
 **CLT vs molten contrast (wrinkling relevance):** compare room-T $$\(D_\text{room}\)$$ to $$\(D_\text{eq}(T,\dot\kappa)\)$$ at forming conditions.
 
 
- Future-Scope
+ ## Future-Scope
 - **Experimental validation:** Refit shear (Carreau–Yasuda) and rheo-bending parameters; substitute measured PA6 (or UD PA6/CF) data for synthetic curves.
 - **Anisotropy (IFRF-lite):** Make bending orthotropic $$(K_b^L vs. K_b^T)$$ and extend shear to fiber-aligned viscosities $$(η_L, η_T)$$.
 - **Forming integration:** Apply `form_cases/dome/material_hook.py` to a FE solver (UMAT/VUMAT/plugin) and evaluate it against a benchmark for dome-forming.
