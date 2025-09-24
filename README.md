@@ -1,4 +1,6 @@
 (https://img.shields.io/github/v/release/Sumantballi/PA6-Rheo-Form?sort=semver)](https://github.com/Sumantballi/PA6-Rheo-Form/releases)
+This mini-project was inspired by Dennis Brands’ PhD on Forming simulations for unidirectional thermoplastic composites: Improving in-plane shear characterization and modeling; it’s a minimal, practice-oriented replication of key ideas.  
+> Thesis: [Forming simulations for unidirectional thermoplastic composites](https://research.utwente.nl/en/publications/forming-simulations-for-unidirectional-thermoplastic-composites-i-2).
 
 Small project showing temperature- & rate-dependent **shear** (Carreau–Yasuda + Arrhenius) and **rheo-bending** (power-law + Arrhenius) for molten PA6.  
 Outputs: viscosity isotherms (η–γ̇), bending isotherms (M–κ̇), Fast vs Slow M–κ, and a solver-style **material hook**.
@@ -52,7 +54,7 @@ D_\text{eq}=\frac{M}{\dot\kappa}
 
 **CLT vs molten contrast (wrinkling relevance):** compare room-T \(D_\text{room}\) to \(D_\text{eq}(T,\dot\kappa)\) at forming conditions.
 
-**How to cite:** Balli, S. (2025). *PA6 Rheo-Form: Shear & Rheo-Bending Models with a Forming Bridge* (v1.0.0). GitHub. https://github.com/YOUR_USER/YOUR_REPO
+
 
 
 
