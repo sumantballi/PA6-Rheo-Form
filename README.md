@@ -34,6 +34,27 @@ No full contact forming simulation.
 **CLT vs molten (summary):** see `figs/CLT_vs_molten_ratio.txt`.
 
 
+## Key Methods & Equations
+
+**Shear (Carreau–Yasuda, with anchored Arrhenius):**  
+\[
+\eta(\dot\gamma,T)=\eta_\infty + \big(\eta_0(T)-\eta_\infty\big)\,\Big[1+(\lambda\,\dot\gamma)^a\Big]^{\frac{n-1}{a}},\quad
+\eta_0(T)=\eta_{0,\mathrm{ref}}\exp\!\Big(\frac{Q}{R}\big(\tfrac{1}{T}-\tfrac{1}{T_\mathrm{ref}}\big)\Big)
+\]
+
+**Rheo-bending (viscous, rate- and temperature-dependent):**  
+\[
+M = K_b(T)\,\dot\kappa^{\,m},\qquad
+K_b(T)=K_{b0}\exp\!\Big(\frac{Q_b}{R}\big(\tfrac{1}{T}-\tfrac{1}{T_\mathrm{ref}}\big)\Big),\qquad
+D_\text{eq}=\frac{M}{\dot\kappa}
+\]
+
+**CLT vs molten contrast (wrinkling relevance):** compare room-T \(D_\text{room}\) to \(D_\text{eq}(T,\dot\kappa)\) at forming conditions.
+
+**Primary references:**  
+- Carreau–Yasuda model for polymer melts (shear-thinning); Arrhenius temperature dependence (anchored at \(T_\mathrm{ref}\)).  
+- Brands, D. (2025). *Forming simulations for unidirectional thermoplastic composites* (PhD thesis). Focus on wrinkling sensitivity to molten bending + in-plane rheology; motivates rate/temperature-aware constitutive inputs.
+
 ## 🎯 Relevance to PhD topic
 - **Constitutive**: temperature- & rate-dependent shear (Carreau–Yasuda + Arrhenius) and **rheo-bending** \(M=K_b(T)\,\dot\kappa^m\).
 - **Findings**: molten bending stiffness at forming conditions is ≈ **10²–10³×** lower than room-T CLT → explains wrinkle suppression with CLT inputs.
