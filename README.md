@@ -1,3 +1,4 @@
+(https://img.shields.io/github/v/release/Sumantballi/PA6-Rheo-Form?sort=semver)](https://github.com/Sumantballi/PA6-Rheo-Form/releases)
 
 Small project showing temperature- & rate-dependent **shear** (Carreau–Yasuda + Arrhenius) and **rheo-bending** (power-law + Arrhenius) for molten PA6.  
 Outputs: viscosity isotherms (η–γ̇), bending isotherms (M–κ̇), Fast vs Slow M–κ, and a solver-style **material hook**.
@@ -51,11 +52,7 @@ D_\text{eq}=\frac{M}{\dot\kappa}
 
 **CLT vs molten contrast (wrinkling relevance):** compare room-T \(D_\text{room}\) to \(D_\text{eq}(T,\dot\kappa)\) at forming conditions.
 
-**Primary references:**  
-- Carreau–Yasuda model for polymer melts (shear-thinning); Arrhenius temperature dependence (anchored at \(T_\mathrm{ref}\)).  
-- Brands, D. (2025). *Forming simulations for unidirectional thermoplastic composites* (PhD thesis). Focus on wrinkling sensitivity to molten bending + in-plane rheology; motivates rate/temperature-aware constitutive inputs.
+**How to cite:** Balli, S. (2025). *PA6 Rheo-Form: Shear & Rheo-Bending Models with a Forming Bridge* (v1.0.0). GitHub. https://github.com/YOUR_USER/YOUR_REPO
 
-## 🎯 Relevance to PhD topic
-- **Constitutive**: temperature- & rate-dependent shear (Carreau–Yasuda + Arrhenius) and **rheo-bending** \(M=K_b(T)\,\dot\kappa^m\).
-- **Findings**: molten bending stiffness at forming conditions is ≈ **10²–10³×** lower than room-T CLT → explains wrinkle suppression with CLT inputs.
-- **Implementation**: `form_cases/dome/material_hook.py` mirrors a UMAT/VUMAT/material-plugin call (same law → solver).
+
+
