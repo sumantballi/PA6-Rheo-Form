@@ -4,7 +4,7 @@
 This mini-project was inspired by Dennis Brands’ PhD on Forming simulations for unidirectional thermoplastic composites: Improving in-plane shear characterization and modeling; it’s a minimal, practice-oriented replication of key ideas.  
 > Thesis: [Forming simulations for unidirectional thermoplastic composites](https://research.utwente.nl/en/publications/forming-simulations-for-unidirectional-thermoplastic-composites-i-2).
 
-Showing temperature- & rate-dependent **shear** (Carreau–Yasuda + Arrhenius) and **rheo-bending** (power-law + Arrhenius) for molten PA6.  
+This mini-project implements rate–temperature shear and rheo-bending for molten PA6 with a solver-style hook. The current model is isotropic; UD anisotropy can be added 
 Outputs: viscosity isotherms (η–γ̇), bending isotherms (M–κ̇), Fast vs Slow M–κ, and a solver-style **material hook**.
 No new rheological tests were conducted. Only the constitutive models and plotting workflow are illustrated by the curves used here, which are synthetic/representative and parameterized to fall within published PA6 melt ranges.
 
